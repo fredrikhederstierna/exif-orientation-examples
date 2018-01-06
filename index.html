@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Exif image rotation examples</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+
+img {
+border: 1px black solid;
+image-orientation: from-image;
+}
+
+iframe {
+border: 1px black solid;
+margin: 0;
+padding: 0;
+}
+
+#portrait  { width:  450px;
+             height: 600px; }
+#landscape { width:  600px;
+             height: 450px; }
+</style>
+
+</head>
+
+<body>
+
+<h1>Exif image rotation examples</h1>
+<h2>Images taken from github.com/recurser/exif-orientation-examples<br>
+<p>
+
+Successfully tested on:
+<p>
+FireFox 40.0.3 (Linux Ubuntu 14.04 64bit)<br>
+FireFox 40.0.3 (Windows 7 64bit)<br>
+</p>
+<p>
+Chrome 44.0.2403.89 (Linux Ubuntu 14.04 64bit)<br>
+Chrome 45.0.2454.85 (Windows 7 64bit)<br>
+Chrome 45.0.2454.84 (Android 4.2.1)<br>
+</p>
+<p>
+Safari (iOS 8.4.1 Mobile)<br>
+Safari 6.1.6 (iMac Desktop)<br>
+</p>
+Not working: Internet Explorer<br>
+</h2>
+
+<script type="text/javascript">
+function getRotatedImageTagLandscape(url) {
+  $browser_firefox = /firefox/.test(navigator.userAgent.toLowerCase());
+  if ($browser_firefox) {
+    return "<img id=landscape src=" + url + "></img>";
+  }
+  else {
+    return "<iframe id=landscape src=" + url + "></iframe>";
+  }
+}
+function getRotatedImageTagPortrait(url) {
+  $browser_firefox = /firefox/.test(navigator.userAgent.toLowerCase());
+  if ($browser_firefox) {
+    return "<img id=portrait src=" + url + "></img>";
+  }
+  else {
+    return "<iframe id=portrait src=" + url + "></iframe>";
+  }
+}
+</script>
+
+<p><script>document.write(getRotatedImageTagLandscape("Landscape_1.jpg"))</script></p>
+<p><script>document.write(getRotatedImageTagLandscape("Landscape_2.jpg"))</script></p>
+<p><script>document.write(getRotatedImageTagLandscape("Landscape_3.jpg"))</script></p>
+<p><script>document.write(getRotatedImageTagLandscape("Landscape_4.jpg"))</script></p>
+<p><script>document.write(getRotatedImageTagLandscape("Landscape_5.jpg"))</script></p>
+<p><script>document.write(getRotatedImageTagLandscape("Landscape_6.jpg"))</script></p>
+<p><script>document.write(getRotatedImageTagLandscape("Landscape_7.jpg"))</script></p>
+<p><script>document.write(getRotatedImageTagLandscape("Landscape_8.jpg"))</script></p>
+
+<p><script>document.write(getRotatedImageTagPortrait("Portrait_1.jpg"))</script></p>
+<p><script>document.write(getRotatedImageTagPortrait("Portrait_2.jpg"))</script></p>
+<p><script>document.write(getRotatedImageTagPortrait("Portrait_3.jpg"))</script></p>
+<p><script>document.write(getRotatedImageTagPortrait("Portrait_4.jpg"))</script></p>
+<p><script>document.write(getRotatedImageTagPortrait("Portrait_5.jpg"))</script></p>
+<p><script>document.write(getRotatedImageTagPortrait("Portrait_6.jpg"))</script></p>
+<p><script>document.write(getRotatedImageTagPortrait("Portrait_7.jpg"))</script></p>
+<p><script>document.write(getRotatedImageTagPortrait("Portrait_8.jpg"))</script></p>
+
+</body>
+</html>
